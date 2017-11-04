@@ -4,7 +4,10 @@
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 =================
 
-[gulp](https://gulpjs.com) plugin to replace [`marked-vega`](https://www.webcomponents.org/element/PolymerVis/marked-vega)
+[![NPM](https://nodei.co/npm-dl/gulp-marked-vega.png)](https://nodei.co/npm/gulp-marked-vega/)
+
+`gulp-marked-vega` is a [gulp](https://gulpjs.com) plugin to replace
+[`marked-vega`](https://www.webcomponents.org/element/PolymerVis/marked-vega)
 codeblocks with base64 image markdown tags so that any markdown parser can
 render the [Vega](https://vega.github.io/vega/) or [Vega-Lite](https://vega.github.io/vega-lite/)
 charts as images.
@@ -80,6 +83,24 @@ Embed and convert to HTML.
 ```
 mdvg -f ./test/sample.md -o ./test/sample_.md --html
 ```
+
+## Special note on `canvas`
+One of the underlaying lib to generate the image is [`canvas`](https://www.npmjs.com/package/canvas).
+`canvas` has some special dependencies. Hence, you will get many error message if these are not met.
+However, [`canvas-prebuilt`](https://www.npmjs.com/package/canvas-prebuilt) is also been included
+to ensure that it will still work if `canvas` cannot be compiled properly.
+
+Below is an extract from `canvas` repo:
+
+> You can quickly install the dependencies by using the command for your OS:
+
+OS | Command
+----- | -----
+OS X | `brew install pkg-config cairo pango libpng jpeg giflib`
+Ubuntu | `sudo apt-get install libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev build-essential g++`
+Fedora | `sudo yum install cairo cairo-devel cairomm-devel libjpeg-turbo-devel pango pango-devel pangomm pangomm-devel giflib-devel`
+Solaris | `pkgin install cairo pango pkg-config xproto renderproto kbproto xextproto`
+Windows | [Instructions on their wiki](https://github.com/Automattic/node-canvas/wiki/Installation---Windows)
 
 ## `marked-vega` custom Markdown Syntax
 `marked-vega` introduces a few new markdown syntax.  

@@ -1,6 +1,6 @@
 {
   "name": "gulp-marked-vega",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description":
     "Gulp plugin to transform marked-vega markdowns in your markdown documents into embedded images so that all standard markdown renderer can still render your charts.",
   "main": "index.js",
@@ -8,7 +8,9 @@
   "author": "eterna2 <eterna2@hotmail.com>",
   "license": "Apache-2.0",
   "private": false,
-  "bin": "./bin/mdvg.js",
+  "bin": {
+    "mdvg": "./bin/mdvg.js"
+  },
   "scripts": {
     "demo": "node ./demo/demo.js",
     "convert": "node bin/mdvg.js",
@@ -35,6 +37,7 @@
     "gulp": "^3.9.1"
   },
   "devDependencies": {
+    "coveralls": "^3.0.0",
     "eslint": "^4.6.1",
     "eslint-config-google": "^0.7.0",
     "eslint-config-prettier": "^2.5.0",
