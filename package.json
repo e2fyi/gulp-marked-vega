@@ -1,8 +1,7 @@
 {
   "name": "gulp-marked-vega",
   "version": "1.0.1",
-  "description":
-    "Gulp plugin to transform marked-vega markdowns in your markdown documents into embedded images so that all standard markdown renderer can still render your charts.",
+  "description": "Gulp plugin to transform marked-vega markdowns in your markdown documents into embedded images so that all standard markdown renderer can still render your charts.",
   "main": "index.js",
   "repository": "git@github.com:e2fyi/gulp-marked-vega.git",
   "author": "eterna2 <eterna2@hotmail.com>",
@@ -19,19 +18,25 @@
     "test": "npm run lint | npm run mocha",
     "coverage": "npx nyc report --reporter=text-lcov | coveralls",
     "publish": "npx jsdoc -d ./docs ./index.js ./lib/*.js",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "lint-staged": {
-    "*.{js,json}": ["prettier --write", "git add"]
+    "*.{js,json}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "dependencies": {
     "argparse": "^1.0.9",
     "gulp-util": "^3.0.8",
-    "marked": "^0.3.6",
+    "marked": "^0.3.17",
     "through2": "^2.0.3",
     "vega": "^3.0.7",
     "vega-lite": "^2.0.0",
-    "yamljs": "^0.3.0"
+    "yamljs": "^0.3.0",
+    "snyk": "^1.116.2"
   },
   "peerDependencies": {
     "gulp": "^3.9.1"
@@ -50,5 +55,6 @@
     "mocha": "^4.0.1",
     "nyc": "^11.3.0",
     "prettier": "^1.7.0"
-  }
+  },
+  "snyk": true
 }
