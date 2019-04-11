@@ -27,10 +27,10 @@
   "dependencies": {
     "argparse": "^1.0.9",
     "gulp-util": "^3.0.8",
-    "marked": "^0.3.6",
+    "marked": "^0.6.2",
     "through2": "^2.0.3",
     "vega": "^3.0.7",
-    "vega-lite": "^2.0.0",
+    "vega-lite": "^3.0.0",
     "yamljs": "^0.3.0"
   },
   "peerDependencies": {
