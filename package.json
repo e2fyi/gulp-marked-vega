@@ -29,8 +29,8 @@
     "gulp-util": "^3.0.8",
     "marked": "^0.3.6",
     "through2": "^2.0.3",
-    "vega": "^3.0.7",
-    "vega-lite": "^2.0.0",
+    "vega": "^5.0.0",
+    "vega-lite": "^4.16.1",
     "yamljs": "^0.3.0"
   },
   "peerDependencies": {
